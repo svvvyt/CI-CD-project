@@ -1,0 +1,6 @@
+[MAIN]
+ignore=integration_test.py, selenium_test
+
+[MESSAGES CONTROL]
+disable = all
+enable = typecheck, string, design, format, imports, main, refactoring, classes, variables, basic

@@ -1,0 +1,4 @@
+celery==5.4.0
+flask==3.0.3
+flask-Login==0.6.3
+lti==0.9.5

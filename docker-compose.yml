@@ -1,0 +1,30 @@
+version: "3"
+services:
+  app:
+    container_name: azar-app
+    build:
+      context: ./app
+      dockerfile: Dockerfile_app
+    ports:
+      - "127.0.0.1:3022:5000"
+    deploy:
+      resources:
+        limits:
+          memory: 140M
+
+  tester:
+    container_name: azar-tester
+    depends_on:
+      - app
+    build:
+      context: ./tester
+      dockerfile: Dockerfile_tester
+    ports:
+      - "127.0.0.1:3023:22"
+    volumes:
+      - ./tester/tests/test_res/:/devops-examples/EXAMPLE_APP/tests/test_res
+    deploy:
+      resources:
+        limits:
+          memory: 140M
+

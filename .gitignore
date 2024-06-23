@@ -1,0 +1,4 @@
+.venv
+.idea
+/tester/tests/test_res
+*__pycache__*
